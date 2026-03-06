@@ -4,13 +4,23 @@
   overflow: hidden;
   background: #000;
   color: #f6f6f6;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(260px, 380px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.captionColumn {
+  width: 100%;
+  max-width: 600px;
+  padding: 28px 24px 0;
+  flex-shrink: 0;
+  z-index: 10;
 }
 
 .wheelColumn {
-  height: 100%;
+  flex: 1;
   min-height: 0;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -29,16 +39,6 @@
   transform: translate(-50%, -50%);
   background: rgba(255, 255, 255, 0.08);
   pointer-events: none;
-}
-
-.captionColumn {
-  height: 100%;
-  min-height: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-right: 14px;
-  overflow: auto;
 }
 
 .wheelStage {
@@ -62,21 +62,4 @@
   justify-content: center;
   align-items: center;
   color: #a0a0a0;
-}
-
-@media (max-width: 980px) {
-  .page {
-    grid-template-columns: 1fr;
-  }
-
-  .captionColumn {
-    position: fixed;
-    left: 50%;
-    bottom: 18px;
-    transform: translateX(-50%);
-    width: min(94vw, 500px);
-    height: auto;
-    padding: 0;
-    pointer-events: none;
-  }
 }

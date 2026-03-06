@@ -127,6 +127,14 @@ export default function WheelPicker({ products }: WheelPickerProps) {
   return (
     <main className={styles.page}>
       <HamburgerMenu />
+      <section className={styles.captionColumn}>
+        <VoiceoverPlayer
+          product={activeProduct}
+          setAudioElementRef={(el) => {
+            audioElRef.current = el;
+          }}
+        />
+      </section>
       <section className={styles.wheelColumn}>
         <div className={styles.wheelViewport} onWheel={onWheel}>
           <div className={styles.centerGuide} />
@@ -173,14 +181,6 @@ export default function WheelPicker({ products }: WheelPickerProps) {
             })}
           </div>
         </div>
-      </section>
-      <section className={styles.captionColumn}>
-        <VoiceoverPlayer
-          product={activeProduct}
-          setAudioElementRef={(el) => {
-            audioElRef.current = el;
-          }}
-        />
       </section>
     </main>
   );

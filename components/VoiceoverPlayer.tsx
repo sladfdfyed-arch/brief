@@ -2,9 +2,6 @@
 
 import { useCallback, useEffect, useRef } from "react";
 import { Product } from "@/lib/types";
-import { getTweetId } from "@/lib/tweet";
-import { getVideoEmbedInfo } from "@/lib/video";
-import LinkPreview from "@/components/LinkPreview";
 import styles from "./VoiceoverPlayer.module.css";
 
 interface VoiceoverPlayerProps {
@@ -46,11 +43,6 @@ export default function VoiceoverPlayer({
     );
   }
 
-  const tweetUrl = product.tweetUrl ?? product.url;
-  const hasTweet = !!getTweetId(tweetUrl);
-  const hasVideo = !!(getVideoEmbedInfo(product.url) ?? getVideoEmbedInfo(product.tweetUrl ?? undefined));
-  const showPreview = product.url && !hasTweet && !hasVideo;
-
   return (
     <aside className={styles.panel}>
       <div className={styles.titleRow}>
@@ -60,11 +52,6 @@ export default function VoiceoverPlayer({
         ) : null}
       </div>
       <p className={styles.caption}>{product.voiceoverText}</p>
-      {showPreview ? (
-        <div className={styles.previewWrap}>
-          <LinkPreview url={product.url!} />
-        </div>
-      ) : null}
       <audio ref={setAudioRef} preload="auto" />
     </aside>
   );
