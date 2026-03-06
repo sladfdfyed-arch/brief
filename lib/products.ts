@@ -1,7 +1,8 @@
 import { randomUUID } from "node:crypto";
 import { promises as fs } from "node:fs";
 import path from "node:path";
-import { del, get, put } from "@vercel/blob";
+import { del, head, put } from "@vercel/blob";
+import { unstable_noStore as noStore } from "next/cache";
 import { Product, ProductInput } from "@/lib/types";
 
 const dataDir = path.join(process.cwd(), "data");
@@ -19,6 +20,7 @@ async function ensureDataFile(): Promise<void> {
 }
 
 export async function readProducts(): Promise<Product[]> {
+  noStore();
   const parsed = await readProductsStore();
   return parsed.sort(
     (a, b) =>
@@ -34,11 +36,13 @@ async function readProductsStore(): Promise<Product[]> {
   // Production: Blob is the source of truth. Code deploys never overwrite Blob.
   if (hasBlobToken) {
     try {
-      const result = await get(blobProductsPath, { access: "public" });
-      if (result && result.statusCode === 200 && result.stream) {
-        const buffer = await new Response(result.stream).arrayBuffer();
-        const text = new TextDecoder().decode(buffer);
-        return JSON.parse(text) as Product[];
+      const entry = await head(blobProductsPath);
+      const url = new URL(entry.url);
+      // Bust public blob caches for this mutable JSON document.
+      url.searchParams.set("v", Date.now().toString());
+      const res = await fetch(url, { cache: "no-store" });
+      if (res.ok) {
+        return (await res.json()) as Product[];
       }
     } catch {
       // Fall through to local store on network/token errors.

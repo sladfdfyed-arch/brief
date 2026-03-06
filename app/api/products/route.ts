@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { readProducts, upsertProduct } from "@/lib/products";
 import { ProductInput } from "@/lib/types";
 
+export const dynamic = "force-dynamic";
+
 export async function GET() {
   try {
     const products = await readProducts();

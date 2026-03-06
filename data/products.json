@@ -1,5 +1,41 @@
 [
   {
+    "id": "c5ee991a-072d-4b81-a251-af4732779cd0",
+    "name": "Kayak Ad",
+    "icon": "",
+    "shortDescription": "",
+    "voiceoverText": "Brilliant Millenial funny",
+    "audioFile": null,
+    "url": "https://shots.net/news/view/kayak-gets-it-right",
+    "tweetUrl": null,
+    "username": null,
+    "dateAdded": "2026-03-06T03:15:43.720Z"
+  },
+  {
+    "id": "534a0e13-3725-4646-9423-a4a780360446",
+    "name": "Haptics",
+    "icon": "",
+    "shortDescription": "",
+    "voiceoverText": "",
+    "audioFile": null,
+    "url": "https://haptics.lochie.me/",
+    "tweetUrl": null,
+    "username": null,
+    "dateAdded": "2026-03-06T03:14:53.665Z"
+  },
+  {
+    "id": "91aad230-b5f5-44bb-b79c-6e13d92ddc6f",
+    "name": "A is for ant",
+    "icon": "",
+    "shortDescription": "",
+    "voiceoverText": "",
+    "audioFile": null,
+    "url": "https://vimeo.com/1168269573?fl=wc",
+    "tweetUrl": null,
+    "username": null,
+    "dateAdded": "2026-03-06T03:14:39.029Z"
+  },
+  {
     "id": "8822c839-5f6a-4681-8ee9-272259ef0c14",
     "name": "Tweet",
     "icon": "🦖",
@@ -12,39 +48,15 @@
     "dateAdded": "2026-03-06T02:09:55.131Z"
   },
   {
-    "id": "notion-mail",
-    "name": "Notion Mail",
-    "icon": "✉️",
-    "shortDescription": "Inbox that triages messages using context and memory.",
-    "voiceoverText": "This matters because email volume keeps growing, and context-aware sorting saves attention every day.",
+    "id": "76d64047-edb4-44ef-94f4-aa591020d589",
+    "name": "Physical Products",
+    "icon": "",
+    "shortDescription": "",
+    "voiceoverText": "",
     "audioFile": null,
-    "url": "https://www.notion.com/product/mail",
+    "url": "https://spectacle.is/video/say-hello-to-playdate",
     "tweetUrl": null,
-    "username": "alex_curator",
-    "dateAdded": "2026-03-01"
-  },
-  {
-    "id": "arc-search",
-    "name": "Arc Search",
-    "icon": "🔎",
-    "shortDescription": "Search with concise AI summaries and cleaner navigation.",
-    "voiceoverText": "I keep this here as a reminder that interfaces can remove noise while still being fast.",
-    "audioFile": null,
-    "url": "https://arc.net/search",
-    "tweetUrl": null,
-    "username": "Slayed",
-    "dateAdded": "2026-02-20"
-  },
-  {
-    "id": "fathom",
-    "name": "Fathom",
-    "icon": "🎙️",
-    "shortDescription": "Meeting notes and highlights captured automatically.",
-    "voiceoverText": "The useful part is less typing and more listening during calls, which changes decision quality.",
-    "audioFile": null,
-    "url": "https://fathom.video",
-    "tweetUrl": null,
-    "username": "maya_finds",
-    "dateAdded": "2026-02-05"
+    "username": null,
+    "dateAdded": "2026-03-06T03:15:56.368Z"
   }
 ]
