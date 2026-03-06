@@ -12,7 +12,7 @@
 .captionColumn {
   width: 100%;
   max-width: 600px;
-  padding: 28px 24px 0;
+  padding: 56px 24px 0;
   flex-shrink: 0;
   z-index: 10;
 }
