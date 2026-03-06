@@ -1,0 +1,50 @@
+[
+  {
+    "id": "8822c839-5f6a-4681-8ee9-272259ef0c14",
+    "name": "Tweet",
+    "icon": "🦖",
+    "shortDescription": "Jack",
+    "voiceoverText": "With prompt first thinking we forget our \"why\" and it's never been so important to remember it. This will keep us from wasting time and in these productivity loops that give real dopamine but fake productivity because there's no real thinking behind it.",
+    "audioFile": null,
+    "url": "https://x.com/jackbutcher/status/2029576124347384315",
+    "tweetUrl": null,
+    "username": "Slayed",
+    "dateAdded": "2026-03-06T02:09:55.131Z"
+  },
+  {
+    "id": "notion-mail",
+    "name": "Notion Mail",
+    "icon": "✉️",
+    "shortDescription": "Inbox that triages messages using context and memory.",
+    "voiceoverText": "This matters because email volume keeps growing, and context-aware sorting saves attention every day.",
+    "audioFile": null,
+    "url": "https://www.notion.com/product/mail",
+    "tweetUrl": null,
+    "username": "alex_curator",
+    "dateAdded": "2026-03-01"
+  },
+  {
+    "id": "arc-search",
+    "name": "Arc Search",
+    "icon": "🔎",
+    "shortDescription": "Search with concise AI summaries and cleaner navigation.",
+    "voiceoverText": "I keep this here as a reminder that interfaces can remove noise while still being fast.",
+    "audioFile": null,
+    "url": "https://arc.net/search",
+    "tweetUrl": null,
+    "username": "Slayed",
+    "dateAdded": "2026-02-20"
+  },
+  {
+    "id": "fathom",
+    "name": "Fathom",
+    "icon": "🎙️",
+    "shortDescription": "Meeting notes and highlights captured automatically.",
+    "voiceoverText": "The useful part is less typing and more listening during calls, which changes decision quality.",
+    "audioFile": null,
+    "url": "https://fathom.video",
+    "tweetUrl": null,
+    "username": "maya_finds",
+    "dateAdded": "2026-02-05"
+  }
+]

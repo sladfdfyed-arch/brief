@@ -1,0 +1,30 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.button,
+.stopButton {
+  border: 1px solid #2c2c2c;
+  background: #111;
+  color: #f2f2f2;
+  border-radius: 10px;
+  padding: 9px 12px;
+  cursor: pointer;
+}
+
+.stopButton {
+  border-color: #7f2525;
+  background: #2c1010;
+}
+
+.button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.error {
+  font-size: 0.84rem;
+  color: #d08e8e;
+}
