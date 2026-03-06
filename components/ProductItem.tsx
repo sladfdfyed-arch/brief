@@ -5,6 +5,7 @@ import { getTweetId } from "@/lib/tweet";
 import { getVideoEmbedInfo } from "@/lib/video";
 import TweetEmbed from "@/components/TweetEmbed";
 import VideoEmbed from "@/components/VideoEmbed";
+import LinkPreview from "@/components/LinkPreview";
 import styles from "./ProductItem.module.css";
 
 interface ProductItemProps {
@@ -33,6 +34,7 @@ export default function ProductItem({
   const videoInfo = getVideoEmbedInfo(product.url) ?? getVideoEmbedInfo(product.tweetUrl ?? undefined);
 
   const showEmbed = (isActive || isSelected) && (tweetId || videoInfo);
+  const showPreview = (isActive || isSelected) && product.url && !tweetId && !videoInfo;
 
   return (
     <div
@@ -83,6 +85,11 @@ export default function ProductItem({
           ) : videoInfo ? (
             <VideoEmbed info={videoInfo} />
           ) : null}
+        </div>
+      ) : null}
+      {showPreview ? (
+        <div className={styles.previewWrap}>
+          <LinkPreview url={product.url!} />
         </div>
       ) : null}
     </div>
